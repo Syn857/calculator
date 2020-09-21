@@ -3,7 +3,10 @@ var user = prompt("How many inches of rain fell?");
 var number = Number(user);
 var input = "*".repeat(number);
 var usingFertilizer = prompt("Did you use fertilizer?");
-var fertilizerQuality = prompt("Did you use premium or regular fertilizer?");
+var fertilizerQuality;
+ if (isUsingFertilizer === "yes") {
+   fertilizerQuality = prompt("Did you use premium or regular fertilizer?");
+ }
 
 //default value for grain
 var grain = 50;
