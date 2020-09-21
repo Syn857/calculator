@@ -2,6 +2,8 @@
 var user = prompt("How many inches of rain fell?");
 var number = Number(user);
 var input = "*".repeat(number);
+var a = prompt("Did you use fertilizer?");
+var b = prompt("Did you use premium or regular fertilizer?");
 
 //default value for grain
 var grain = 50;
@@ -18,19 +20,15 @@ function rainFall() {
 
 //fertilizer function
 function promptFertilizer() {
- var a = prompt("Did you use fertilizer?");
   if (a === "yes") {
     return typeFertilizer()
-  } else if (a === "no") {
-    return ("The yield should be "+ rainFall()+ " bushels per acres.")
   } else {
-
+    return ("The yield should be "+ rainFall()+ " bushels per acres.")
   }
 }
 
 //fertilizer type Function
 function typeFertilizer() {
- var b = prompt("Did you use premium or regular fertilizer?");
   if (b === "regular") {
     return ((rainFall() / 100) * 10);
   } else {
@@ -46,7 +44,6 @@ var result = rainFall() + typeFertilizer();
 // }
 
 console.log(input);
-console.log(rainFall());
 console.log(promptFertilizer());
-console.log("The yield should be "+ result + " bushels per acres."result);
+console.log("The yield should be "+ result + " bushels per acres.");
 // console.log(countAll());
