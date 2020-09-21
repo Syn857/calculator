@@ -1,5 +1,5 @@
 // prompt first for rain fall
-var user = prompt("How many inches of rain fell?");
+var user = parseInt(prompt("How many inches of rain fell?"));
 var number = Number(user);
 var input = "*".repeat(number);
 
@@ -8,11 +8,11 @@ var grain = 50;
 
 //function to calculate the amount of rain
 function rainFall() {
-  var rainInches = user;
+  var rainInches = number;
   if (rainInches > 20) {
-   return ((grain / 100) * 20);
-  } else {
    return ((grain / 100) * 10);
+  } else {
+   return ((grain / 100) * 20);
   }
 }
 
@@ -22,7 +22,7 @@ function promptFertilizer() {
   if (a === "yes") {
     return typeFertilizer()
   } else if (a === "no") {
-    return ("The yield should be ", rainFall(), " bushels per acres.")
+    return ("The yield should be "+ rainFall()+ " bushels per acres.")
   } else {
 
   }
@@ -39,9 +39,12 @@ function typeFertilizer() {
 }
 
 function countAll(){
-
+  var rain = rainFall;
+  var fert = typeFertilizer;
+  return (rain + typeFertilizer);
 }
 
 console.log(input);
-rainFall();
-promptFertilizer();
+console.log(rainFall(user));
+console.log(promptFertilizer());
+console.log(countAll());
