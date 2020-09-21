@@ -1,5 +1,5 @@
 // prompt first for rain fall
-var user = parseInt(prompt("How many inches of rain fell?"));
+var user = prompt("How many inches of rain fell?");
 var number = Number(user);
 var input = "*".repeat(number);
 
@@ -10,9 +10,9 @@ var grain = 50;
 function rainFall() {
   var rainInches = number;
   if (rainInches > 20) {
-   return ((grain / 100) * 10);
+   return ((grain / 100) * 90);
   } else {
-   return ((grain / 100) * 20);
+   return ((grain / 100) * 80);
   }
 }
 
@@ -45,6 +45,6 @@ function countAll(){
 }
 
 console.log(input);
-console.log(rainFall(user));
+console.log(rainFall());
 console.log(promptFertilizer());
 console.log(countAll());
