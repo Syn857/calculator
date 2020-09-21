@@ -1,22 +1,18 @@
 // prompt first for rain fall
 var user = prompt("How many inches of rain fell?");
 var number = Number(user);
-var input = user.repeat(number);
-var rep = input.replace(input, '*');
-var repv = rep.repeat(number);
+var input = "*".repeat(number);
 
 //default value for grain
-var grain = -50;
+var grain = 50;
 
 //function to calculate the amount of rain
 function rainFall() {
   var rainInches = user;
   if (rainInches > 20) {
-   return (((10 / 100) * 50) - grain);
-  } else if (rainInches < 10){
-   return (((20 / 100) * 50) - grain);
+   return ((grain / 100) * 20);
   } else {
-
+   return ((grain / 100) * 10);
   }
 }
 
@@ -36,9 +32,9 @@ function promptFertilizer() {
 function typeFertilizer() {
  var b = prompt("Did you use premium or regular fertilizer?");
   if (b === "regular") {
-    return (((10 / 100) * user) - grain);
-  } else if (b === "premium") {
-    return (((15 / 100) * user) - grain);
+    return ((grain / 100) * 10);
+  } else {
+    return ((grain / 100) * 15);
   }
 }
 
@@ -46,6 +42,6 @@ function countAll(){
 
 }
 
-console.log(repv);
+console.log(input);
 rainFall();
 promptFertilizer();
