@@ -4,7 +4,7 @@ var number = Number(user);
 var input = "*".repeat(number);
 var usingFertilizer = prompt("Did you use fertilizer?");
 var fertilizerQuality;
- if (isUsingFertilizer === "yes") {
+ if (usingFertilizer === "yes") {
    fertilizerQuality = prompt("Did you use premium or regular fertilizer?");
  }
 
