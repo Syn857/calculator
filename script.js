@@ -41,9 +41,9 @@ function typeFertilizer() {
 
 var result;
 if (usingFertilizer) {
-  var result = rainFall() + typeFertilizer();
+   result = rainFall() + typeFertilizer();
 } else {
-  var result = rainFall();
+   result = rainFall();
 }
 
 console.log(input);
