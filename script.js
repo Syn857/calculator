@@ -32,19 +32,21 @@ function promptFertilizer() {
 function typeFertilizer() {
  var b = prompt("Did you use premium or regular fertilizer?");
   if (b === "regular") {
-    return ((grain / 100) * 10);
+    return ((rainFall() / 100) * 10);
   } else {
-    return ((grain / 100) * 15);
+    return ((rainFall() / 100) * 15);
   }
 }
 
-function countAll(){
-  var rain = rainFall;
-  var fert = typeFertilizer;
-  return (rain + typeFertilizer);
-}
+var result = rainFall() + typeFertilizer();
+// function countAll(){
+//   var rain = rainFall;
+//   var fert = typeFertilizer;
+//   return (rain + typeFertilizer);
+// }
 
 console.log(input);
 console.log(rainFall());
 console.log(promptFertilizer());
-console.log(countAll());
+console.log("The yield should be "+ result + " bushels per acres."result);
+// console.log(countAll());
