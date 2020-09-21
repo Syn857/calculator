@@ -39,7 +39,12 @@ function typeFertilizer() {
   }
 }
 
-var result = rainFall() + typeFertilizer();
+var result;
+if (usingFertilizer) {
+  var result = rainFall() + typeFertilizer();
+} else {
+  var result = rainFall();
+}
 
 console.log(input);
 // console.log(promptFertilizer());
